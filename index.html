@@ -1,232 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortalBali - Your Local Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BaliOS - The Island Operating System</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a1a1f">
 </head>
+
 <body>
 
+    <!-- Top Sticky Header -->
     <header class="header">
-        <div class="container header-content">
-            <a href="#" class="logo">Portal<span>Bali</span></a>
-            
-            <nav class="nav">
-                <a href="#news" data-i18n="nav_news">News</a>
-                <a href="#services" data-i18n="nav_services">Services</a>
-                <a href="#ads" data-i18n="nav_ads">Ads</a>
-                <a href="#events" data-i18n="nav_events">Events</a>
-            </nav>
-
-            <div class="lang-selector">
-                <select id="langSelect">
-                    <option value="en">🇺🇸 English</option>
-                    <option value="id">🇮🇩 Indonesia</option>
-                    <option value="ru">🇷🇺 Русский</option>
-                    <option value="fr">🇫🇷 Français</option>
-                    <option value="hi">🇮🇳 Hindi</option>
-                    <option value="jp">🇯🇵 日本語</option>
-                    <option value="zh">🇨🇳 中文</option>
-                    <option value="it">🇮🇹 Italiano</option>
-                    <option value="de">🇩🇪 Deutsch</option>
-                    <option value="nl">🇳🇱 Nederlands</option>
-                    <option value="pl">🇵🇱 Polski</option>
-                    <option value="th">🇹🇭 Thai</option>
-                    <option value="ms">🇲🇾 Malay</option>
-                    <option value="es">🇪🇸 Español</option>
-                    <option value="ua">🇺🇦 Українська</option>
-                    <option value="kk">🇰🇿 Kazakh</option>
-                    <option value="ko">🇰🇷 Korean</option>
-                    <option value="tw">🇹🇼 Taiwanese</option>
-                    <option value="tl">🇵🇭 Filipino</option>
-                    <option value="ar">🇦🇪 Arabic</option>
-                    <option value="lb">🇱🇺 Lëtzebuergesch</option>
-                </select>
+        <div class="logo">Bali<span>OS</span></div>
+        <div class="header-actions">
+            <div class="weather-pill">
+                <i class="fas fa-cloud-moon"></i> 27°C
             </div>
-            
-            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <div class="profile-pic">
+                <img src="https://ui-avatars.com/api/?name=User&background=0D8ABC&color=fff" alt="Profile">
+            </div>
         </div>
     </header>
 
-    <!-- Mobile Nav -->
-    <div class="mobile-nav">
-        <a href="#news" data-i18n="nav_news">News</a>
-        <a href="#services" data-i18n="nav_services">Services</a>
-        <a href="#ads" data-i18n="nav_ads">Ads</a>
-        <a href="#events" data-i18n="nav_events">Events</a>
-    </div>
+    <!-- Main Content Area -->
+    <main class="app-container">
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 data-i18n="hero_title">Everything you need in Bali</h1>
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" data-i18n-placeholder="hero_search_placeholder" placeholder="Find services, places, events...">
-                <button class="search-btn"><i class="fas fa-arrow-right"></i></button>
-            </div>
-            
-            <div class="hero-widgets">
-                <div class="widget">
-                    <i class="fas fa-cloud-sun"></i>
-                    <div>
-                        <span class="widget-label" data-i18n="status_weather">Weather</span>
-                        <span class="widget-value">29°C Sunny</span>
-                    </div>
-                </div>
-                <div class="widget">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <div>
-                        <span class="widget-label" data-i18n="status_currency">Currency</span>
-                        <span class="widget-value">$1 = 15,850 IDR</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- View: DASHBOARD (Active by default) -->
+        <section id="view-dashboard" class="view active">
 
-    <section id="news" class="section">
-        <div class="container">
-            <h2 class="section-title" data-i18n="section_news_title">Latest News in Bali</h2>
-            <div class="grid news-grid">
-                <!-- Mock News Item 1 -->
-                <article class="card news-card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=500&q=60')"></div>
-                    <div class="card-content">
-                        <span class="tag">Local</span>
-                        <h3>NewVisa Regulations for 2026 Announced</h3>
-                        <p>Important updates for long-term stay permits in Indonesia starting next month.</p>
-                        <span class="date">2 hours ago</span>
-                    </div>
-                </article>
-                <!-- Mock News Item 2 -->
-                <article class="card news-card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552694698-081884175b92?auto=format&fit=crop&w=500&q=60')"></div>
-                    <div class="card-content">
-                        <span class="tag">Events</span>
-                        <h3>Ubud Food Festival Returns This Weekend</h3>
-                        <p>Culinary experts from around the world gather for the annual feast.</p>
-                        <span class="date">4 hours ago</span>
-                    </div>
-                </article>
-                <!-- Mock News Item 3 -->
-                <article class="card news-card">
-                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=500&q=60')"></div>
-                    <div class="card-content">
-                        <span class="tag">Traffic</span>
-                        <h3>Sunset Road Shortcuts are Open</h3>
-                        <p>Relief for commuters as the new shortcut roads are finally accessible.</p>
-                        <span class="date">6 hours ago</span>
-                    </div>
-                </article>
+            <!-- Welcome -->
+            <div class="welcome-box">
+                <h1>Good Evening, Nomad.</h1>
+                <p>The island pulse is <span class="pulse-status">Alive</span>.</p>
             </div>
-        </div>
-    </section>
 
-    <section id="services" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title" data-i18n="section_services_title">Popular Services</h2>
-            <div class="grid services-grid">
-                <a href="#" class="service-card">
-                    <div class="icon-box"><i class="fas fa-passport"></i></div>
-                    <span data-i18n="service_visa">Visa & Legal</span>
-                </a>
-                <a href="#" class="service-card">
-                    <div class="icon-box"><i class="fas fa-motorcycle"></i></div>
-                    <span data-i18n="service_scooter">Bike Rental</span>
-                </a>
-                <a href="#" class="service-card">
-                    <div class="icon-box"><i class="fas fa-home"></i></div>
-                    <span data-i18n="service_realestate">Real Estate</span>
-                </a>
-                <a href="#" class="service-card">
-                    <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
-                    <span data-i18n="service_coworking">Co-Working</span>
-                </a>
-                <a href="#" class="service-card">
-                    <div class="icon-box"><i class="fas fa-hospital-alt"></i></div>
-                    <span data-i18n="service_medical">Medical Info</span>
-                </a>
-                <a href="#" class="service-card">
-                    <div class="icon-box"><i class="fas fa-tshirt"></i></div>
-                    <span data-i18n="service_laundry">Laundry</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="ads" class="section">
-        <div class="container">
-            <h2 class="section-title" data-i18n="section_ads_title">Classifieds</h2>
-            <div class="tabs">
-                <button class="tab active" data-i18n="ads_rent">For Rent</button>
-                <button class="tab" data-i18n="ads_job">Jobs</button>
-                <button class="tab" data-i18n="ads_sell">For Sale</button>
-            </div>
-            
-            <div class="grid ads-grid">
-                <div class="card ad-card">
-                    <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=500&q=60')"></div>
-                    <div class="ad-info">
-                        <h4>Villa in Canggu</h4>
-                        <p class="price">45 Mil / Month</p>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Berawa</p>
+            <!-- Island Pulse Horizontal Scroll -->
+            <div class="pulse-container">
+                <div class="pulse-card traffic expensive">
+                    <div class="card-icon"><i class="fas fa-car"></i></div>
+                    <div class="card-data">
+                        <span class="label">Traffic</span>
+                        <span class="value">Heavy</span>
+                        <span class="sub">Canggu Shortcut</span>
                     </div>
                 </div>
-                <div class="card ad-card">
-                    <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84f3d?auto=format&fit=crop&w=500&q=60')"></div>
-                    <div class="ad-info">
-                        <h4>Yamaha Nmax 2025</h4>
-                        <p class="price">1.8 Mil / Month</p>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Seminyak</p>
+                <div class="pulse-card surf good">
+                    <div class="card-icon"><i class="fas fa-water"></i></div>
+                    <div class="card-data">
+                        <span class="label">Surf</span>
+                        <span class="value">4-6ft</span>
+                        <span class="sub">Uluwatu: Glassy</span>
                     </div>
                 </div>
-                <div class="card ad-card">
-                    <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=500&q=60')"></div>
-                    <div class="ad-info">
-                        <h4>Social Media Manager</h4>
-                        <p class="price">Full Time</p>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Ubud</p>
-                    </div>
-                </div>
-                <div class="card ad-card">
-                    <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=500&q=60')"></div>
-                    <div class="ad-info">
-                        <h4>Loft Apartment</h4>
-                        <p class="price">25 Mil / Month</p>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Pererenan</p>
+                <div class="pulse-card currency">
+                    <div class="card-icon"><i class="fas fa-coins"></i></div>
+                    <div class="card-data">
+                        <span class="label">Rate</span>
+                        <span class="value">15,850</span>
+                        <span class="sub">USD to IDR</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <h3>PortalBali</h3>
-                <p>The #1 Local Guide for Expats & Tourists.</p>
+            <!-- Sunset Radar Widget -->
+            <div class="widget-full sunset-radar">
+                <div class="widget-header">
+                    <h3><i class="fas fa-sun"></i> Sunset Radar</h3>
+                    <span class="badge">High Probability</span>
+                </div>
+                <div class="radar-visual">
+                    <div class="radar-circle"></div>
+                    <div class="radar-line"></div>
+                    <div class="sun-icon"><i class="fas fa-sun"></i></div>
+                </div>
+                <div class="radar-info">
+                    <p>Best Spot: <strong>La Brisa, Echo Beach</strong></p>
+                    <p class="time">Sunset in 01h 12m</p>
+                </div>
             </div>
-            <div class="footer-col">
-                <a href="#" data-i18n="footer_about">About Us</a>
-                <a href="#" data-i18n="footer_contact">Contact</a>
-                <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-            </div>
-            <div class="footer-col social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2026 PortalBali. All rights reserved.
-        </div>
-    </footer>
 
+            <!-- Quick Services Grid -->
+            <div class="section-header">
+                <h3>Quick Actions</h3>
+            </div>
+            <div class="quick-grid">
+                <div class="quick-btn" onclick="openModal('bike')">
+                    <i class="fas fa-motorcycle"></i>
+                    <span>Rent Bike</span>
+                </div>
+                <div class="quick-btn">
+                    <i class="fas fa-file-contract"></i>
+                    <span>Visa Help</span>
+                </div>
+                <div class="quick-btn">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Laundry</span>
+                </div>
+                <div class="quick-btn">
+                    <i class="fas fa-plane"></i>
+                    <span>Airport</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- View: NOMAD RADAR -->
+        <section id="view-nomad" class="view">
+            <div class="section-header">
+                <h2>Nomad Intelligence</h2>
+                <button class="filter-btn"><i class="fas fa-sliders-h"></i></button>
+            </div>
+
+            <div class="nomad-list">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- View: MARKETPLACE -->
+        <section id="view-market" class="view">
+            <div class="section-header">
+                <h2>Fair Price Meter</h2>
+            </div>
+
+            <div class="tool-card price-meter">
+                <p>Check if you are paying the "Bule Price". Enter a service or item.</p>
+                <div class="input-group">
+                    <input type="text" id="price-search" placeholder="e.g. Nmax Monthly">
+                    <button id="price-check-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="price-result" class="price-result hidden">
+                    <!-- Result inserted here -->
+                </div>
+            </div>
+
+            <div class="market-categories">
+                <h3>Verified Categories</h3>
+                <div class="category-list">
+                    <div class="cat-item">
+                        <i class="fas fa-home"></i>
+                        <span>Villas</span>
+                    </div>
+                    <div class="cat-item">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>Bikes</span>
+                    </div>
+                    <div class="cat-item">
+                        <i class="fas fa-camera"></i>
+                        <span>Photo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- View: COMMUNITY -->
+        <section id="view-community" class="view">
+            <div class="section-header">
+                <h2>Community Hive</h2>
+            </div>
+            <div class="forum-list">
+                <div class="forum-topic">
+                    <div class="topic-votes">
+                        <i class="fas fa-chevron-up"></i>
+                        <span>42</span>
+                    </div>
+                    <div class="topic-content">
+                        <h4>Best notary for PMA setup in 2026?</h4>
+                        <span class="topic-meta">asked by @crypto_nomad • 2h ago</span>
+                    </div>
+                </div>
+                <div class="forum-topic">
+                    <div class="topic-votes">
+                        <i class="fas fa-chevron-up"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="topic-content">
+                        <h4>Where to find specialized keto catering?</h4>
+                        <span class="topic-meta">asked by @yogagirl • 5h ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-target="view-dashboard">
+            <i class="fas fa-compass"></i>
+            <span>Pulse</span>
+        </button>
+        <button class="nav-item" data-target="view-nomad">
+            <i class="fas fa-wifi"></i>
+            <span>Radar</span>
+        </button>
+        <button class="nav-item main-action" onclick="alert('AI Assistant Coming Soon')">
+            <div class="ai-button">
+                <i class="fas fa-fingerprint"></i>
+            </div>
+        </button>
+        <button class="nav-item" data-target="view-market">
+            <i class="fas fa-tag"></i>
+            <span>Market</span>
+        </button>
+        <button class="nav-item" data-target="view-community">
+            <i class="fas fa-users"></i>
+            <span>Hive</span>
+        </button>
+    </nav>
+
+    <!-- Scripts -->
     <script src="translations.js"></script>
     <script src="script.js"></script>
+    <!-- Modules will be consolidated in script.js for this prototype -->
 </body>
+
 </html>
