@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortalBali - Your Local Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">Portal<span>Bali</span></a>
+            
+            <nav class="nav">
+                <a href="#news" data-i18n="nav_news">News</a>
+                <a href="#services" data-i18n="nav_services">Services</a>
+                <a href="#ads" data-i18n="nav_ads">Ads</a>
+                <a href="#events" data-i18n="nav_events">Events</a>
+            </nav>
+
+            <div class="lang-selector">
+                <select id="langSelect">
+                    <option value="en">🇺🇸 English</option>
+                    <option value="id">🇮🇩 Indonesia</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="hi">🇮🇳 Hindi</option>
+                    <option value="jp">🇯🇵 日本語</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="pl">🇵🇱 Polski</option>
+                    <option value="th">🇹🇭 Thai</option>
+                    <option value="ms">🇲🇾 Malay</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="ua">🇺🇦 Українська</option>
+                    <option value="kk">🇰🇿 Kazakh</option>
+                    <option value="ko">🇰🇷 Korean</option>
+                    <option value="tw">🇹🇼 Taiwanese</option>
+                    <option value="tl">🇵🇭 Filipino</option>
+                    <option value="ar">🇦🇪 Arabic</option>
+                    <option value="lb">🇱🇺 Lëtzebuergesch</option>
+                </select>
+            </div>
+            
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav">
+        <a href="#news" data-i18n="nav_news">News</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#ads" data-i18n="nav_ads">Ads</a>
+        <a href="#events" data-i18n="nav_events">Events</a>
+    </div>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 data-i18n="hero_title">Everything you need in Bali</h1>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" data-i18n-placeholder="hero_search_placeholder" placeholder="Find services, places, events...">
+                <button class="search-btn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="hero-widgets">
+                <div class="widget">
+                    <i class="fas fa-cloud-sun"></i>
+                    <div>
+                        <span class="widget-label" data-i18n="status_weather">Weather</span>
+                        <span class="widget-value">29°C Sunny</span>
+                    </div>
+                </div>
+                <div class="widget">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <div>
+                        <span class="widget-label" data-i18n="status_currency">Currency</span>
+                        <span class="widget-value">$1 = 15,850 IDR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_news_title">Latest News in Bali</h2>
+            <div class="grid news-grid">
+                <!-- Mock News Item 1 -->
+                <article class="card news-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=500&q=60')"></div>
+                    <div class="card-content">
+                        <span class="tag">Local</span>
+                        <h3>NewVisa Regulations for 2026 Announced</h3>
+                        <p>Important updates for long-term stay permits in Indonesia starting next month.</p>
+                        <span class="date">2 hours ago</span>
+                    </div>
+                </article>
+                <!-- Mock News Item 2 -->
+                <article class="card news-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552694698-081884175b92?auto=format&fit=crop&w=500&q=60')"></div>
+                    <div class="card-content">
+                        <span class="tag">Events</span>
+                        <h3>Ubud Food Festival Returns This Weekend</h3>
+                        <p>Culinary experts from around the world gather for the annual feast.</p>
+                        <span class="date">4 hours ago</span>
+                    </div>
+                </article>
+                <!-- Mock News Item 3 -->
+                <article class="card news-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=500&q=60')"></div>
+                    <div class="card-content">
+                        <span class="tag">Traffic</span>
+                        <h3>Sunset Road Shortcuts are Open</h3>
+                        <p>Relief for commuters as the new shortcut roads are finally accessible.</p>
+                        <span class="date">6 hours ago</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_services_title">Popular Services</h2>
+            <div class="grid services-grid">
+                <a href="#" class="service-card">
+                    <div class="icon-box"><i class="fas fa-passport"></i></div>
+                    <span data-i18n="service_visa">Visa & Legal</span>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="icon-box"><i class="fas fa-motorcycle"></i></div>
+                    <span data-i18n="service_scooter">Bike Rental</span>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="icon-box"><i class="fas fa-home"></i></div>
+                    <span data-i18n="service_realestate">Real Estate</span>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                    <span data-i18n="service_coworking">Co-Working</span>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="icon-box"><i class="fas fa-hospital-alt"></i></div>
+                    <span data-i18n="service_medical">Medical Info</span>
+                </a>
+                <a href="#" class="service-card">
+                    <div class="icon-box"><i class="fas fa-tshirt"></i></div>
+                    <span data-i18n="service_laundry">Laundry</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ads" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="section_ads_title">Classifieds</h2>
+            <div class="tabs">
+                <button class="tab active" data-i18n="ads_rent">For Rent</button>
+                <button class="tab" data-i18n="ads_job">Jobs</button>
+                <button class="tab" data-i18n="ads_sell">For Sale</button>
+            </div>
+            
+            <div class="grid ads-grid">
+                <div class="card ad-card">
+                    <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=500&q=60')"></div>
+                    <div class="ad-info">
+                        <h4>Villa in Canggu</h4>
+                        <p class="price">45 Mil / Month</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Berawa</p>
+                    </div>
+                </div>
+                <div class="card ad-card">
+                    <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84f3d?auto=format&fit=crop&w=500&q=60')"></div>
+                    <div class="ad-info">
+                        <h4>Yamaha Nmax 2025</h4>
+                        <p class="price">1.8 Mil / Month</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Seminyak</p>
+                    </div>
+                </div>
+                <div class="card ad-card">
+                    <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=500&q=60')"></div>
+                    <div class="ad-info">
+                        <h4>Social Media Manager</h4>
+                        <p class="price">Full Time</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Ubud</p>
+                    </div>
+                </div>
+                <div class="card ad-card">
+                    <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=500&q=60')"></div>
+                    <div class="ad-info">
+                        <h4>Loft Apartment</h4>
+                        <p class="price">25 Mil / Month</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Pererenan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>PortalBali</h3>
+                <p>The #1 Local Guide for Expats & Tourists.</p>
+            </div>
+            <div class="footer-col">
+                <a href="#" data-i18n="footer_about">About Us</a>
+                <a href="#" data-i18n="footer_contact">Contact</a>
+                <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+            </div>
+            <div class="footer-col social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 PortalBali. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
